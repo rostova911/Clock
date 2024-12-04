@@ -1,0 +1,108 @@
+
+/*ЧАСЫ*/
+.clock {
+    background-color: rgb(243, 236, 193);
+    width: 300px;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: 100px;
+    border: 4px solid rgb(221, 183, 12);
+    border-radius: 50%;
+    margin-bottom: 200px;
+  }
+
+  .nombers {
+    width: 30px;
+    height: 30px;
+    background-color:  rgb(221, 183, 12);
+    border-radius: 50%;
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+ .minArrow{
+    margin-top: 61px;
+    margin-left: 150px;
+    width: 5px;
+    height: 100px;
+    background-color: rgb(221, 183, 12);
+    position: absolute;
+    transform-origin: 15% 95%;
+    animation: arrows 60s linear infinite;
+ }
+
+ .hourArrow{
+    margin-top: 88px;
+    margin-left: 150px;
+    width: 5px;
+    height: 70px;
+    background-color: chocolate;
+    position: absolute;
+    transform-origin: 37% 95%;
+    animation: arrows 180s linear infinite;
+   
+ }
+
+ @keyframes arrows {
+    from{
+        
+    }
+    to {
+        rotate: 360deg;
+        
+    }
+}
+
+/*ВОРОТА*/
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(85, 81, 75);
+    border: 2px solid rgb(0, 0, 0);
+    width: 700px;
+    height: 250px;
+    perspective: 800px;
+}
+
+.hi{
+    position: absolute;
+    margin-top: 110px;
+    font-size: 30px;
+    
+}
+
+.left{
+    background-color: rgb(134, 91, 173);
+    width: 350px;
+    height: 250px;
+    border-right: 1px solid black;
+    z-index: 2;
+    transform-origin: 0%;
+}
+.right{
+    background-color: rgb(134, 91, 173);
+    width: 350px;
+    height: 250px;
+    border-left: 1px solid black;
+    z-index: 2;
+    transform-origin: 100%;
+    
+}
+
+
+.container:hover .left{
+    transition: 2s;
+    transform: rotateY(-45deg);
+     
+    
+}
+
+.container:hover .right{
+    transition: 2s;
+    transform: rotateY(-45deg);
+    
+}
